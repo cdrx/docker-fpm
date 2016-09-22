@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM debian:8
 
 ENV TINI_VERSION v0.10.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini

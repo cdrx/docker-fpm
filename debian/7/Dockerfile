@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM debian:7
 
 ENV TINI_VERSION v0.10.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
@@ -14,7 +14,6 @@ RUN set -x \
 		make \
 		ca-certificates \
 		libffi-dev \
-		ruby-ffi \
 	&& gem install fpm \
 	&& mkdir /src/
 
