@@ -5,9 +5,9 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 
 RUN set -x \
-    && dnf install -y ruby-devel gcc make rpmdevtools \
+    && yum install -y ruby-devel gcc make rpmdevtools \
     && gem install fpm \
-    && dnf clean all \
+    && yum clean all \
     && mkdir /src
 
 WORKDIR /src/
