@@ -13,4 +13,4 @@ RUN set -x \
 
 WORKDIR /src/
 
-ENTRYPOINT ["/tini", "-g",  "--", "/usr/local/bin/fpm"]
+ENTRYPOINT ["/tini", "-g",  "--", "/usr/bin/fpm"]
