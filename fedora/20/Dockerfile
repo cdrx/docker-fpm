@@ -1,9 +1,5 @@
 FROM fedora:20
 
-ENV TINI_VERSION v0.10.0
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
-RUN chmod +x /tini
-
 RUN set -x \
     && yum install -y ruby-devel gcc make rpmdevtools \
     && gem install fpm \
@@ -12,4 +8,4 @@ RUN set -x \
 
 WORKDIR /src/
 
-ENTRYPOINT ["/tini", "-g",  "--", "/usr/local/bin/fpm"]
+CMD /usr/local/bin/fpm

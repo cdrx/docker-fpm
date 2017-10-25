@@ -1,10 +1,10 @@
 # FPM (effing package manager) Docker Images
 
-**cdrx/fpm-{$distro}** are a series of Docker images to quickly get packages building in fpm on different Linux distributions. 
+**cdrx/fpm-{$distro}** are a series of Docker images to quickly get packages building in fpm on different Linux distributions.
 
-Each distro has fpm installed and all the required dependencies to build packages for that platform. All images are 64bit. 
+Each distro has fpm installed and all the required dependencies to build packages for that platform. All images are 64bit.
 
-fpm is the entrypoint for the container, so you just need to supply your build options as commands to the container (see examples below). You should mount the files you want to put into your package into `/src/`. 
+You should mount the files you want to put into your package into `/src/`.
 
 If you need to do any complicated setup in the environment before running `fpm` then it would be best to write a bash script, mount it into `/src/` and override the containers entrypoint when you run it. `fpm` is available to run in the system path.
 
@@ -35,9 +35,9 @@ The `:latest` tag will always point to the most recent release of the distro.
 ## Usage
 
 ```
-docker run -v "$(pwd):/src/" cdrx/fpm-ubuntu:16.04 -s dir -t deb ..
+docker run -v "$(pwd):/src/" cdrx/fpm-ubuntu:16.04 fpm -s dir -t deb ..
 ```
 
 ```
-docker run -v "$(pwd):/src/" cdrx/fpm-fedora:24 -s dir -t rpm ..
+docker run -v "$(pwd):/src/" cdrx/fpm-fedora:24 fpm -s dir -t rpm ..
 ```
