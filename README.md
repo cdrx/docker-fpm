@@ -11,6 +11,7 @@ If you need to do any complicated setup in the environment before running `fpm` 
 ## Images
 
 * Ubuntu w/ fpm
+  * `cdrx/fpm-ubuntu:18.04` - bionic
   * `cdrx/fpm-ubuntu:16.04` - xenial
   * `cdrx/fpm-ubuntu:14.04` - trusty
 
