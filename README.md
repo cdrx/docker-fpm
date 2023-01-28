@@ -25,11 +25,18 @@ If you need to do any complicated setup in the environment before running `fpm` 
   * `cdrx/fpm-fedora:22`
   * `cdrx/fpm-fedora:21`
   * `cdrx/fpm-fedora:20`
+  * `cdrx/fpm-fedora:37`
 
 * CentOS w/ fpm
   * `cdrx/fpm-centos:7`
   * `cdrx/fpm-centos:6`
   * `cdrx/fpm-centos:5`
+
+* Rocky Linux w/ fpm
+  * `cdrx/fpm-rockylinux:9`
+
+* Alpine w/ fpm
+  * `cdrx/fpm-alpine:3.17.1`
 
 The `:latest` tag will always point to the most recent release of the distro.
 
